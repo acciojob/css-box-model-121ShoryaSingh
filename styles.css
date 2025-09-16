@@ -1,14 +1,131 @@
 
-/* Your CSS Code here. */
-*{
-	box-sizing: content-box;
-	margin:0;
-padding:0;
-}
-.box-model-demo {
+body {
+      margin: 40px;
+      font-family: monospace;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Main box model */
+    .box-model-demo {
       width: 300px;
+      background-color: lightblue;
+      border: 15px solid blue;
       padding: 50px;
-		border: 15px solid blue;
-	background-color: lightblue;
-	margin: 20px
+      margin: 20px;
+      box-sizing: content-box;
+      font-family: monospace;
+      font-size: 14px;
+      color: black;
+      position: relative;
+    }
+
+    /* Label styles */
+    .label {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 2px 6px;
+      font-size: 12px;
+      font-weight: bold;
+      color: black;
+      border: 1px solid #333;
+      white-space: nowrap;
+    }
+
+    /* Margin label - top left */
+    .margin-label {
+      top: -10px;
+      left: -10px;
+    }
+
+    /* Border label - top */
+    .border-label {
+      top: 5px;
+      left: 50px;
+    }
+
+    /* Padding label - inside top left */
+    .padding-label {
+      top: 25px;
+      left: 25px;
+    }
+
+    /* Color label - inside top right */
+    .color-label {
+      top: 25px;
+      right: 25px;
+    }
+
+    /* Width measurement */
+    .width-measurement {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .width-line {
+      position: absolute;
+      bottom: -30px;
+      left: 65px;
+      right: 65px;
+      height: 2px;
+      background-color: black;
+    }
+
+    .width-line::before,
+    .width-line::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      top: -3px;
+    }
+
+    .width-line::before {
+      left: -5px;
+      border-width: 4px 5px 4px 0;
+      border-color: transparent black transparent transparent;
+    }
+
+    .width-line::after {
+      right: -5px;
+      border-width: 4px 0 4px 5px;
+      border-color: transparent transparent transparent black;
+    }
+
+    /* Corner markers */
+    .corner-marker {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: white;
+      border: 1px solid black;
+    }
+
+    .corner-marker.top-left {
+      top: 60px;
+      left: 60px;
+    }
+
+    .corner-marker.top-right {
+      top: 60px;
+      right: 60px;
+    }
+
+    .corner-marker.bottom-left {
+      bottom: 60px;
+      left: 60px;
+    }
+
+    .corner-marker.bottom-right {
+      bottom: 60px;
+      right: 60px;
     }
