@@ -1,12 +1,12 @@
 
 /* Your CSS Code here. */
+
 .box-model-demo {
       width: 300px;
       background-color: lightblue;
       border: 15px solid blue;
       padding: 50px;
       margin: 20px;
-      font-family: monospace;
-      font-size: 16px;
+	  box-sizing: border-box;
       color: black;
     }
